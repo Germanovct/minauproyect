@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minau Studio - Home</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="popup" id="welcome-popup">
+        <h2>Welcome to Minau Studio!</h2>
+        <p>We are a leading multimedia development company specializing in web development, Unity development, game design, sound design, music composition, audio implementation, UI/UX design, 3D art, 3D animation, and shaders.</p>
+        <p>Subscribe to our newsletter to receive updates and news about our projects!</p>
+        <form>
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <button class="btn-btn-close" onclick="closeWelcomePopup()">Close</button>
+      </div>
+      
+      <div class="language-switch">
+        <label class="switch">
+          <input type="checkbox" id="languageCheckbox">
+          <span class="slider round"></span>
+        </label>
+        <span id="languageLabel">English</span>
+      </div>
+      
+
+  <header class="home-header">
+    <div class="overlay"></div>
+    <h1 class="logo">Minau Studio</h1>
+    <button class="btn-learn-more" onclick="scrollToTeamSection()">Learn More</button>
+  </header>
+  <main>
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <p>Minau Studio is a leading multimedia development company that offers a wide range of services to meet the diverse needs of our clients. With a team of highly skilled professionals, we take pride in delivering innovative solutions that exceed expectations.</p>
+      <p>Our expertise spans across various areas, including web development, Unity development, game design, sound design, music composition, audio implementation, UI/UX design, 3D art, 3D animation, and shaders.</p>
+    </section>
+    <section id="our-team" class="section">
+      <h2>Our Team</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>German Ocampo</h3>
+          <p>Web Developer</p>
+          <p>John is an experienced web developer with a strong background in front-end and back-end technologies. He enjoys building responsive and user-friendly websites that leave a lasting impression on users.</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h3>Gonzalo Ocampo</h3>
+          <p>Unity Developer</p>
+          <p>Jane is a skilled Unity developer with a passion for creating immersive and engaging gaming experiences. She loves exploring new technologies and implementing cutting-edge features in her projects.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Mike Johnson</h3>
+          <p>Game Designer</p>
+          <p>Mike is a creative game designer who brings unique concepts to life. His expertise in game mechanics and level design contributes to the success of our game development projects.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Mike Johnson</h3>
+            <p>Game Designer</p>
+            <p>Mike is a creative game designer who brings unique concepts to life. His expertise in game mechanics and level design contributes to the success of our game development projects.</p>
+          </div>
+        <!-- Agrega más integrantes y sus roles -->
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <p>To learn more about our services or to join our team, please contact us at <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>.</p>
+    </section>
+</main>
+<script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script>
+    function scrollToTeamSection() {
+      const teamSection = document.getElementById("our-team");
+      teamSection.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+  <!-- Resto del contenido ... -->
+
+<script src="index.js"></script>
+<script>
+  // Código para cambiar el idioma
+  const languageCheckbox = document.getElementById('languageCheckbox');
+  const languageText = document.querySelector('.language-switch span');
+
+  languageCheckbox.addEventListener('change', () => {
+    if (languageCheckbox.checked) {
+      // Cambiar a inglés
+      // Por ejemplo, puedes cambiar el texto de las secciones y botones a inglés
+      document.getElementById('about').querySelector('h2').textContent = 'About Us';
+      document.getElementById('contact').querySelector('h2').textContent = 'Contact Us';
+      languageText.textContent = 'Spanish';
+    } else {
+      // Cambiar a español (o lo que corresponda)
+      // Vuelve a poner el texto original de las secciones y botones en español
+      document.getElementById('about').querySelector('h2').textContent = 'Acerca de Nosotros';
+      document.getElementById('contact').querySelector('h2').textContent = 'Contáctanos';
+      languageText.textContent = 'English';
+    }
+  });
+</script>
+
+<footer>
+  <!-- Resto del contenido ... -->
+</footer>
+
+</body>
+</html>
+
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+    <p>Copyright &copy; 2023 My Website</p>
+  </footer>
+  
+</body>
+</html>
